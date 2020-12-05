@@ -27,7 +27,8 @@
     "start": "ts-node --project tsconfig.json src/index.ts",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "cover": "jest --coverage",
+    "quality": "yarn lint && yarn cover && sonar-scanner"
   },
   "dependencies": {
     "commander": "^6.2.0",

@@ -113,3 +113,6 @@ package-lock.json
 !**/.yarn/sdks
 !**/.yarn/versions
 **/.pnp.*
+
+.sonar/
+.scannerwork/
