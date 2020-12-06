@@ -1,5 +1,5 @@
 module.exports = {
   hooks: {
-    'pre-commit': 'yarn lint && yarn cover && yarn quality',
+    'pre-commit': 'lint-staged && yarn quality',
   },
 };
