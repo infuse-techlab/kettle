@@ -2,6 +2,8 @@
 
 exports[`CoreProgram should have no regression 1`] = `
 CoreCommand {
+  "name": [MockFunction],
+  "parse": [MockFunction],
   "version": [MockFunction],
 }
 `;

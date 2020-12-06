@@ -1,3 +1,4 @@
+import { name, version } from '../../../package.json';
 import { CoreCommand } from '../core.command';
 import { CoreProgram } from '../core.program';
 
@@ -10,11 +11,25 @@ describe('CoreProgram', () => {
     expect(coreProgram).toBeInstanceOf(CoreProgram);
   });
 
+  it('should set program name', () => {
+    const mockCoreCommand = new CoreCommand();
+    new CoreProgram(mockCoreCommand);
+    expect(mockCoreCommand.name).toBeCalledTimes(1);
+    expect(mockCoreCommand.name).toBeCalledWith(name);
+  });
+
   it('should set command version', () => {
     const mockCoreCommand = new CoreCommand();
     new CoreProgram(mockCoreCommand);
     expect(mockCoreCommand.version).toBeCalledTimes(1);
-    expect(mockCoreCommand.version).toBeCalledWith('0.0.0');
+    expect(mockCoreCommand.version).toBeCalledWith(version, '-v, --version', 'output the current version');
+  });
+
+  it('should parse arguments', () => {
+    const mockCoreCommand = new CoreCommand();
+    new CoreProgram(mockCoreCommand);
+    expect(mockCoreCommand.parse).toBeCalledTimes(1);
+    expect(mockCoreCommand.parse).toBeCalledWith();
   });
 
   it('should run the app', () => {
