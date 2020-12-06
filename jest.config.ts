@@ -18,7 +18,7 @@ export default {
     },
   },
   coverageProvider: 'v8',
-  coverageReporters: ['json-summary', 'text', 'lcov', 'cobertura'],
+  coverageReporters: ['json', 'text', 'lcov'],
   testEnvironment: 'node',
   preset: 'ts-jest',
   transform: {

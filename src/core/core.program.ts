@@ -12,7 +12,7 @@ export class CoreProgram {
   };
 
   // noinspection JSUnusedGlobalSymbols
-  public run = (): void => {
+  public run = async (): Promise<void> => {
     console.log('Hello world!');
   };
 }
