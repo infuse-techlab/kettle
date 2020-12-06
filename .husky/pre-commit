@@ -1,1 +1,1 @@
-lint-staged && yarn quality
+yarn lint-staged
