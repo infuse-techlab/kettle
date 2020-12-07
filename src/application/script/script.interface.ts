@@ -1,4 +1,4 @@
-export interface IScriptHandler {
+export interface IScript {
   getName(): string;
   run(): Promise<void>;
 }

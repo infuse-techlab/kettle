@@ -1,10 +1,9 @@
 import { Service } from 'typedi';
 import { CoreCommand } from '../../core/core.command';
-import { ApplicationHandlerAbstract } from '../application.handler.abstract';
-import { IApplicationHandler } from '../application.handler.interface';
+import { ApplicationAbstract } from '../application.abstract';
 
 @Service()
-export class RestHandler extends ApplicationHandlerAbstract implements IApplicationHandler {
+export class RestHandler extends ApplicationAbstract {
   public static TYPE = 'rest';
   public static DEFAULT_PORT = 3000;
 

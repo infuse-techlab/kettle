@@ -1,12 +1,11 @@
 import { Service } from 'typedi';
 import { CoreCommand } from '../../core/core.command';
-import { ApplicationHandlerAbstract } from '../application.handler.abstract';
-import { IApplicationHandler } from '../application.handler.interface';
-import { ScriptHelloWorld } from './script.hello-world';
+import { ApplicationAbstract } from '../application.abstract';
+import { ScriptAbstract } from './script.abstract';
 import { ScriptLoader } from './script.loader';
 
 @Service()
-export class ScriptHandler extends ApplicationHandlerAbstract implements IApplicationHandler {
+export class ScriptHandler extends ApplicationAbstract {
   public static TYPE = 'script';
 
   constructor(private readonly command: CoreCommand) {
@@ -22,14 +21,14 @@ export class ScriptHandler extends ApplicationHandlerAbstract implements IApplic
     return ScriptHandler.TYPE;
   };
 
-  private loadScripts = (): ScriptHelloWorld[] => {
+  private loadScripts = (): ScriptAbstract[] => {
     return ScriptLoader.load();
   };
 
   public run = async (): Promise<void> => {
     console.log('Script should run...');
     const [name] = this.command.args;
-    const scripts: ScriptHelloWorld[] = this.loadScripts().filter((script) => name === script.getName());
+    const scripts: ScriptAbstract[] = this.loadScripts().filter((script) => name === script.getName());
     if (scripts.length === 0) {
       return this.command.help();
     }

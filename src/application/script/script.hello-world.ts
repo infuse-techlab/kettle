@@ -1,10 +1,9 @@
 import { Service } from 'typedi';
 import { CoreCommand } from '../../core/core.command';
-import { ScriptHandlerAbstract } from './script.handler.abstract';
-import { IScriptHandler } from './script.handler.interface';
+import { ScriptAbstract } from './script.abstract';
 
 @Service()
-export class ScriptHelloWorld extends ScriptHandlerAbstract implements IScriptHandler {
+export class ScriptHelloWorld extends ScriptAbstract {
   public static NAME = 'hello-world';
 
   constructor(private readonly command: CoreCommand) {
