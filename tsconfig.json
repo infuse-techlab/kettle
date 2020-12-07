@@ -5,8 +5,11 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
     "module": "commonjs",
+    "target": "ESNext",
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
@@ -25,14 +28,12 @@
       "@root/*": [
         "*"
       ]
-    },
-    "plugins": [
-      {
-        "transform": "@zerollup/ts-transform-paths",
-        "exclude": [
-          "*"
-        ]
-      }
-    ]
-  }
+    }
+  },
+  "exclude": [
+    "jest.config.ts",
+    "**/__mocks__",
+    "**/__tests__",
+    "**/*.test.js"
+  ]
 }
