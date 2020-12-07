@@ -1,4 +1,4 @@
-import { IApplication } from './application.interface';
+import { IApplication } from '@application/application.interface';
 
 export abstract class ApplicationAbstract implements IApplication {
   protected abstract init: () => void;

@@ -1,6 +1,6 @@
+import { ApplicationAbstract } from '@application/application.abstract';
+import { CoreCommand } from '@core/core.command';
 import { Service } from 'typedi';
-import { CoreCommand } from '../../core/core.command';
-import { ApplicationAbstract } from '../application.abstract';
 
 @Service()
 export class RestHandler extends ApplicationAbstract {

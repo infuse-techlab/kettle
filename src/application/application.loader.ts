@@ -1,7 +1,7 @@
+import { ApplicationAbstract } from '@application/application.abstract';
+import { RestHandler } from '@application/rest/rest.handler';
+import { ScriptHandler } from '@application/script/script.handler';
 import { Container, Service } from 'typedi';
-import { ApplicationAbstract } from './application.abstract';
-import { RestHandler } from './rest/rest.handler';
-import { ScriptHandler } from './script/script.handler';
 
 @Service()
 export class ApplicationLoader {

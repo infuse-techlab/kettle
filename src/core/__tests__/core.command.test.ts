@@ -1,5 +1,5 @@
+import { CoreCommand } from '@core/core.command';
 import { Command } from 'commander';
-import { CoreCommand } from '../core.command';
 
 describe('CoreCommand', () => {
   it('should set exacts same objects as commander.Command', () => {

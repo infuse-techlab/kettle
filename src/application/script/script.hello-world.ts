@@ -1,6 +1,6 @@
 import { Service } from 'typedi';
-import { CoreCommand } from '../../core/core.command';
-import { ScriptAbstract } from './script.abstract';
+import { CoreCommand } from '@core/core.command';
+import { ScriptAbstract } from '@application/script/script.abstract';
 
 @Service()
 export class ScriptHelloWorld extends ScriptAbstract {

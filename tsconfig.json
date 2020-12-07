@@ -3,6 +3,36 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "ESNext",
+    "module": "commonjs",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@application/*": [
+        "src/application/*"
+      ],
+      "@core/*": [
+        "src/core/*"
+      ],
+      "@domain/*": [
+        "src/domain/*"
+      ],
+      "@infrastructure/*": [
+        "src/infrastructure/*"
+      ],
+      "@root/*": [
+        "*"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": [
+          "*"
+        ]
+      }
+    ]
   }
 }

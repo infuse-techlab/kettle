@@ -1,6 +1,6 @@
-import { name, version } from '../../../package.json';
-import { CoreCommand } from '../core.command';
-import { CoreProgram } from '../core.program';
+import { CoreCommand } from '@core/core.command';
+import { CoreProgram } from '@core/core.program';
+import { name, version } from '@root/package.json';
 
 jest.mock('../core.command');
 

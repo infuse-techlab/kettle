@@ -1,7 +1,7 @@
 import { Service } from 'typedi';
 import { name, version } from '../../package.json';
-import { ApplicationAbstract } from '../application/application.abstract';
-import { ApplicationLoader } from '../application/application.loader';
+import { ApplicationAbstract } from '@application/application.abstract';
+import { ApplicationLoader } from '@application/application.loader';
 import { CoreCommand } from './core.command';
 
 @Service()

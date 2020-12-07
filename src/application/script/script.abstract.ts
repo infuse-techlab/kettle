@@ -1,4 +1,4 @@
-import { IScript } from './script.interface';
+import { IScript } from '@application/script/script.interface';
 
 export abstract class ScriptAbstract implements IScript {
   protected abstract init: () => void;

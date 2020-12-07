@@ -1,8 +1,8 @@
+import { ApplicationAbstract } from '@application/application.abstract';
+import { ScriptAbstract } from '@application/script/script.abstract';
+import { ScriptLoader } from '@application/script/script.loader';
+import { CoreCommand } from '@core/core.command';
 import { Service } from 'typedi';
-import { CoreCommand } from '../../core/core.command';
-import { ApplicationAbstract } from '../application.abstract';
-import { ScriptAbstract } from './script.abstract';
-import { ScriptLoader } from './script.loader';
 
 @Service()
 export class ScriptHandler extends ApplicationAbstract {
